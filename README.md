@@ -8,8 +8,11 @@ Setting up and getting the list of customers to display was fairly easy. Most of
 =======WHAT DIDN'T GO WELL=======
 I had a lot of trouble getting the data from the API to appear on the browser. I was able to access it on the console, but it wouldn't display on the browser.
 Learning to filter the recipes has definitely been a bit of challenge. As of now, it works if the allergen is hardcoded in the file rather than by customer input. I tried adding several code snipets to see if it would display what intended on submit, but it kept breaking.
+Furthermore, for some weird reason, I was able to get one API to display on the browser and not the other. I am not sure why. I tried several things and nothing worked. I even copied and pasted my own code from the recipes component into the allergens component, and it still didn't work.
 
 Also, my addform wouldn't work and took me hours to figure out why. Additionally, I kept trying to add "<Redirect to="/recipes"/>" to redirect the customer to the recipes page when filling out the form, but it either wouldn't redirect, or it made the page stay on the recipes page, or it broke the whole code.
+
+Also, for some reason the CSS was finicky in the customers' profile page. Though I had divs in the correct places, it wouldn't separate the customers list. It blended them all together in one long box. I had the divs the same way on the recipes file and it laid them out correctly, so I'm not sure what happened there. 
 
 I ran out of time in trying to figure out to add and combine the allergens API to work along the recipes API. The initial set up on the back end took me about two and a half days because I ran into a lot of trouble with the files structures, the correct key words and codes I needed to make it work, then the migrations weren't working, and then deploying to Heroku was extremely difficult because the errors on the Heroku logs weren't super clear in pinpointing the main problem. Once the migrations worked, it kept saying something about a buildpack, but I had added the buildpack. Then I realized I had some files one level too deep that I needed to move out to the root directory; however, it still wouldn't deploy. Finally, after the files and migrations were done correctly, the final error turned out to be a typo in the manage.py file.
 

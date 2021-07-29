@@ -4,6 +4,7 @@ import axios from 'axios'
 class Allergens extends React.Component {
   state = {
     allergens: [],
+    name: "",
   };
 
 //   this.state={
@@ -39,7 +40,6 @@ class Allergens extends React.Component {
               <dd>{this.state.allergen}</dd>
             </dl>
           </div>
-
         ))}
       </div>
     );
