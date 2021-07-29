@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Allergens from '../components/Allergens'
 
 class Recipes extends React.Component {
   state = {
@@ -37,7 +38,10 @@ class Recipes extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.displayRecipe}>View Recipes</button>
+        <button onClick={this.displayRecipe}>Click Here to View Recipes</button>
+        <br/>
+        <br/>
+        <Allergens/>
         {this.state.recipes.map((recipe) => (
            /*{ allergy ? filteredRecipe : */
           <div key={recipe.id}>
@@ -56,6 +60,7 @@ class Recipes extends React.Component {
           //    </div>
           // )*/
         ))}
+
       </div>
     );
   }

@@ -10,6 +10,7 @@ import CustomerProf from './components/CustomerProf'
 import AddCustomer from './components/AddCustomer'
 import Footer from './components/Footer'
 import Recipes from './components/Recipes'
+import Allergens from './components/Allergens'
 import './App.css';
 
 class App extends React.Component {
@@ -58,20 +59,24 @@ class App extends React.Component {
           <div className="App">
              <ScrollUpButton/>
              <Nav/>
-             <AddCustomer
-               addCustomer={this.addCustomer}
-               displayRecipe={this.displayRecipe}
-               id="add"/>
+
          <Switch>
                <Route path="/" exact component={Home}>
                 <div id="home-container">
                  <Home/>
+                 <AddCustomer
+                   addCustomer={this.addCustomer}
+                   id="add"
+                   />
+
                 </div>
                </Route>
 
                <Route path="/Recipes">
                   <div id="recipes">
-                  <Recipes/>
+                  <Recipes
+                  displayRecipe={this.displayRecipe}
+                  id="recipe"/>
                   </div>
                </Route>
                <Route path="/Welcome">

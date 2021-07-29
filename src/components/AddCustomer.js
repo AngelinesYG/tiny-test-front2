@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Redirect} from 'react-router';
 import '../App.css';
 
 export default class AddCustomer extends Component {
@@ -28,7 +29,7 @@ export default class AddCustomer extends Component {
    render(){
       return(
          <details>
-            <summary>Add Customer</summary>
+            <summary>Join Tiny!</summary>
             <div className='addingC'>
                <form className="addCustomer" onSubmit={this.handleSubmit}>
                <label htmlFor="first_name">First Name:</label>
@@ -82,6 +83,7 @@ export default class AddCustomer extends Component {
                <input
                   type="submit"
                   value="Add Customer"/>
+                  
                </form>
             </div>
          </details>

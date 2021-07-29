@@ -6,8 +6,7 @@ class Home extends React.Component {
       return(
          <div className="newCustomer">
             <h1>Welcome to Tiny!</h1>
-            <h2>Fill out the form below to sign up</h2>
-            <AddCustomer/>
+            <h2>Click below to Join Tiny</h2>
          </div>
       )
    }
